@@ -1,0 +1,81 @@
+/* index.css — updated reset + layout fixes */
+
+/* 1) make box-sizing predictable across the app */
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* 2) remove default margins + ensure root fills viewport */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* 3) keep horizontal overflow hidden to avoid 100vw scrollbar issues */
+/* This hides accidental horizontal scroll caused by 100vw usage elsewhere.
+   If you ever need horizontal scrolling deliberately, remove this line. */
+body {
+  overflow-x: hidden;
+}
+
+/* keep your font setup */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* code font */
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* Helpful defaults for links and images used widely in the app */
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Images should not overflow their containers */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Buttons baseline reset */
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Utility: container that mirrors CONTAINER_MAX_WIDTH & CONTAINER_PADDING */
+.app-container {
+  width: 100%;
+  max-width: 1200px; /* keep in sync with CONTAINER_MAX_WIDTH */
+  padding-left: 32px; /* keep in sync with CONTAINER_PADDING */
+  padding-right: 32px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Small helper to hide scrollbars on overflow:auto where desired (optional) */
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE 10+ */
+  scrollbar-width: none;     /* Firefox */
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome/Safari/Webkit */
+}

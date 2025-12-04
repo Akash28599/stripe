@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "chickens",
+  "info": {
+    "singularName": "chicken",
+    "pluralName": "chickens",
+    "displayName": "Chicken"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "json"
+    },
+    "body": {
+      "type": "json"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}
